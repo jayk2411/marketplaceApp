@@ -4,12 +4,11 @@ import cookieParser from 'cookie-parser'
 import compress from 'compression'
 import cors from 'cors'
 import helmet from 'helmet'
-import Template from './../template.js'
 import productRoutes from './routes/products.routes.js'
 
 const app = express()
 app.get('/', (req, res) => {
-    res.status(200).send(Template()) 
+    res.status(200).send({message : "welcome to the marketPlace"}) 
     })
 
 app.use(express.json());
